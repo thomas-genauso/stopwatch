@@ -22,6 +22,17 @@ function show(element) {
   element.classList.remove("display-none");
 }
 
+// Toggle disable button
+function disableButton(element, boolean) {
+  if (boolean) {
+    element.classList.add("button-disabled");
+    element.disabled = true;
+  } else {
+    element.classList.remove("button-disabled");
+    element.disabled = false;
+  }
+}
+
 // Format and display the time on screen
 function display(centiseconds, seconds, minutes) {
   var formattedCentiseconds = "";
@@ -67,7 +78,7 @@ display(0, 0, 0);
 startButton.addEventListener("click", function() {
   // Show and hide relevent buttons
   hide(startButton);
-  hide(resetButton);
+  disableButton(resetButton, true);
   show(stopButton);
 
   // Start the stopwatch, this function will every 0.1 seconds
@@ -98,7 +109,7 @@ startButton.addEventListener("click", function() {
     // Hide and show relevent buttons
     hide(stopButton);
     show(startButton);
-    show(resetButton);
+    disableButton(resetButton, false);
 
     // Stop the stopwatch, the 'stopwatch' value passed on is the setInterval function
     clearInterval(stopwatch);
@@ -109,7 +120,7 @@ startButton.addEventListener("click", function() {
 // Users will only see this button if the stopwatch has stopped after running
 resetButton.addEventListener("click", function() {
   // Hide relevent buttons
-  hide(resetButton);
+  disableButton(resetButton, true);
   hide(stopButton);
 
   // Reset the time
