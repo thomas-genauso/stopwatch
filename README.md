@@ -1,10 +1,10 @@
-# stopwatch
+# Stopwatch
 
 A simple stopwatch app written only in pure css and javascript, no framework/library whatsoever.
 
 The main files are index.html, styles.css and app.js.
 
-You can see the app live [here.](https://agile8272.github.io/stopwatch/index.html).
+You can see the app live [here](https://agile8272.github.io/stopwatch/index.html).
 
 ## How to run the app
 
