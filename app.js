@@ -17,6 +17,8 @@ var mil = 0;
 var displayMil = "00";
 var seconds = 0;
 var displaySeconds = "00";
+var minutes = 0;
+var displayMinutes = "00";
 
 startButton.addEventListener("click", function() {
   hide(startButton);
@@ -28,6 +30,11 @@ startButton.addEventListener("click", function() {
     if (mil === 99) {
       mil = 0;
       seconds = seconds + 1;
+    }
+
+    if (seconds === 60) {
+      seconds = 0;
+      minutes = minutes + 1;
     }
 
     if (mil < 10) {
@@ -42,7 +49,14 @@ startButton.addEventListener("click", function() {
       displaySeconds = seconds.toString();
     }
 
-    stopwatch.innerHTML = displaySeconds + "." + displayMil;
+    if (minutes < 10) {
+      displayMinutes = "0" + minutes;
+    } else {
+      displayMinutes = minutes.toString();
+    }
+
+    stopwatch.innerHTML =
+      displayMinutes + ":" + displaySeconds + "." + displayMil;
   }, 10);
 
   stopButton.addEventListener("click", function() {
