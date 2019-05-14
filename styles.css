@@ -42,7 +42,7 @@ body {
 }
 
 .heading h1 {
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   color: #fff;
 }
 
@@ -53,24 +53,24 @@ body {
 }
 
 .stopwatch {
-  font-size: 7rem;
+  font-size: 12rem;
   color: #fff;
   font-weight: 100;
 }
 
 .actions {
   padding-top: 5rem;
-  width: 29rem;
+  width: 50rem;
   left: 50%;
   position: absolute;
   transform: translateX(-50%);
 }
 
 .button {
-  width: 6.5rem;
-  height: 6.5rem;
+  width: 10rem;
+  height: 10rem;
   border-radius: 500px;
-  font-size: 1.4rem;
+  font-size: 2rem;
   font-weight: 300;
   background-color: rgb(61, 61, 61);
   border: none;
@@ -127,30 +127,67 @@ body {
   float: right;
 }
 
-@media only screen and (max-width: 525px) {
+@media only screen and (max-width: 675px) {
+  html {
+    font-size: 55.5%;
+  }
+
   .box {
     padding-top: 8rem;
   }
+}
 
-  .button {
-    width: 6.8rem;
-    height: 6.8rem;
+@media only screen and (max-width: 530px) {
+  html {
+    font-size: 48%;
+  }
+
+  .actions {
+    width: 45rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  html {
+    font-size: 45.5%;
+  }
+
+  .actions {
+    width: 40rem;
   }
 }
 
 @media only screen and (max-width: 400px) {
   html {
-    font-size: 55.5%;
+    font-size: 40%;
+  }
+
+  .actions {
+    width: 36rem;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  html {
+    font-size: 37%;
+  }
+
+  .actions {
+    width: 32rem;
+  }
+}
+
+@media only screen and (max-width: 315px) {
+  .stopwatch {
+    font-size: 10rem;
   }
 
   .button {
     width: 7rem;
     height: 7rem;
   }
-}
 
-@media only screen and (max-width: 300px) {
-  html {
-    font-size: 45.5%;
+  .actions {
+    width: 26rem;
   }
 }
